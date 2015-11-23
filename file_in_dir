@@ -1,0 +1,12 @@
+#!/bin/bash
+#Searches for a specific filename within a directory.
+clear
+echo "Enter the name of a file you think is in your current directory..."
+read FILENAME
+if [ -a $FILENAME ]
+then 
+echo "You are right! $FILENAME is in your current directory."
+else
+echo "Sorry. $FILENAME isn't in your current directory."
+fi 
+echo "Hope you enjoyed the script!"
