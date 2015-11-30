@@ -1,0 +1,26 @@
+#!/bin/bash
+CHOICE=0
+#Runs while the chosen option isn't 4
+until [ $CHOICE -eq 4 ]
+do
+clear
+echo "Please select a menu item..."
+echo 
+echo "1) Display the current directory"
+echo "2) Display your home directory"
+echo "3) List the contents of your current directory"
+echo "4) Exit the program"
+echo 
+#Reads in the user's choice 
+read CHOICE
+#Checks the choice and matches to a case
+case $CHOICE in 
+1) pwd ;;
+2) echo $HOME ;; 
+3) ls ;;
+4) echo "Have a good day!" ;;
+*) echo "Invalid selection..." ;;
+esac
+echo "Press enter to continue"
+read Enter 
+done 
