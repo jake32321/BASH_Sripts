@@ -1,0 +1,10 @@
+#!/bin/bash
+#Runs as long as the file is in the directory
+while cat testfile > /dev/null 
+do
+echo "exit status code is $?"
+#One second delay
+sleep 1
+done
+#Returned after the file is removed
+echo "You deleted the file!"
